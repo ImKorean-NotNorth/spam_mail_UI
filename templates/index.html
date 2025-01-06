@@ -13,18 +13,19 @@
     <img id="spamImage2" src="static/spam_mail.png" alt="spam_mail" width="500">
 
     <div class="container">
-        <h1>스팸 메일 분류기</h1>
+        <h1>이메일 제목으로</h1>
+        <h2>메일 분류하기</h2>
         <form action="/" method="post">
             <label for="title">이메일 제목을 입력해주세요:</label><br>
             <input type="text" id="title" name="title" required value="{{ title }}"><br><br>
-            <button type="submit">스팸 메일 분류기</button>
+            <button type="submit">메일 분류기</button>
         </form>
 
         {% if prediction_result %}
-        <h2>예측 결과:</h2>
+        <h3>예측 결과:</h3>
         <p>제목: "{{ title }}"</p>
-        <p>스팸 여부: {{ prediction_result }}</p>
-        <p>확률: {{ confidence }}%</p> <!-- 확신도에 % 기호 추가 -->
+        <p>분류 결과: {{ prediction_result }}</p>
+        <p>정확도: {{ confidence }}%</p>
         {% endif %}
     </div>
      <div class="text">

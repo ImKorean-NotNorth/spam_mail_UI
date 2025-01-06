@@ -10,15 +10,31 @@ body {
 }
 
 /* 콘텐츠를 감싸는 div */
+
 .container {
     text-align: center; /* 텍스트 중앙 정렬 */
-    padding: 20px;
+    padding: 30px;
     border-radius: 8px;
     background-color: white; /* 배경을 흰색으로 설정 */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
     width: 80%;
     max-width: 600px; /* 최대 너비 제한 */
 }
+/* h1과 h2의 스타일 동일하게 설정 */
+.container h1,
+.container h2 {
+    font-size: 3rem; /* 동일한 크기 */
+    font-weight: bold; /* 동일한 굵기 */
+    margin: 0; /* 여백 제거 */
+    line-height: 1.5; /* 줄 간격 설정 */
+    font-family: Arial, sans-serif; /* 동일한 폰트 */
+}
+/* 자연스러운 줄바꿈 설정 */
+.container h1 {
+    word-wrap: break-word; /* 줄바꿈 처리 */
+    display: inline-block; /* 텍스트가 자연스럽게 중앙에 배치 */
+}
+
 #spamImage1 {
     position: absolute; /* 절대 좌표로 위치 지정 */
     top: 10px; /* 화면 위에서 100px 떨어짐 */
@@ -52,7 +68,7 @@ button:hover {
 /* 텍스트 블록 스타일 */
 .text {
     position: absolute; /* 절대 좌표로 위치 지정 */
-    bottom: 50px; /* 화면 밑에서 50px 떨어짐 */
+    bottom: 30px; /* 화면 밑에서 50px 떨어짐 */
     margin-top: 50px;
     font-size: 50px;
     text-align: center;
@@ -60,20 +76,20 @@ button:hover {
 }
 
 .text h1 {
-    font-size: 40px; /* 큰 글씨 */
+    font-size: 20px; /* 큰 글씨 */
     font-weight: bold; /* 굵게 */
     color: #222; /* 진한 색상 */
 }
 
 .text h2 {
-    font-size: 40px; /* 중간 크기 글씨 */
+    font-size: 20px; /* 중간 크기 글씨 */
     font-weight: bold; /* 굵게 */
     color: #222; /* 진한 색상 */
 }
 /* 예측 결과를 보여주는 부분 스타일 */
-h2 {
+h3 {
     margin-top: 20px;
-    font-size: 24px;
+    font-size: 20px;
     color: #555;
 }
 
